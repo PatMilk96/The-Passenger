@@ -1,7 +1,7 @@
 package ie.atu;
 
 public class Passenger {
-    private String title;
+    private static String title;
     private String name;
     private String id;
     private String phone;
@@ -16,7 +16,12 @@ public class Passenger {
     }
 
     public String getTitle() {
-        return title;
+        if(title == "Mr" || title == "Mrs" || title == "Ms"){
+            return title;
+        }
+        else{
+            throw new IllegalArgumentException("Please Enter a valid title");
+        }
     }
 
     public void setTitle(String title) {
@@ -24,7 +29,12 @@ public class Passenger {
     }
 
     public String getName() {
-        return name;
+        if(name.length() >= 3){
+            return name;
+        }
+        else{
+            throw new IllegalArgumentException("This is not a valid name, must be three or more characters");
+        }
     }
 
     public void setName(String name) {
@@ -48,10 +58,16 @@ public class Passenger {
     }
 
     public int getAge() {
-        return age;
+        if(age > 16){
+            return age;
+        }
+        else
+            throw new IllegalArgumentException("Must be over 16");
     }
 
     public void setAge(int age) {
         this.age = age;
     }
 }
+
+
