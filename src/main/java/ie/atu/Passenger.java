@@ -42,7 +42,13 @@ public class Passenger {
     }
 
     public String getId() {
-        return id;
+        if(id.length() < 10){
+            throw new IllegalArgumentException("ID must be at least 10 characters long");
+        }
+        else{
+            return id;
+        }
+
     }
 
     public void setId(String id) {
@@ -50,7 +56,13 @@ public class Passenger {
     }
 
     public String getPhone() {
-        return phone;
+        if(phone.length() < 7){
+            throw new IllegalArgumentException("Phone number must be at least 7 digits long");
+        }
+        else{
+            return phone;
+        }
+
     }
 
     public void setPhone(String phone) {

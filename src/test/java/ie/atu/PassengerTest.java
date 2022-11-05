@@ -24,16 +24,30 @@ class PassengerTest {
 
     @Test
     void titleTestFail(){
-        Passenger newPass = new Passenger("King", "Patryk", "1234567890", "0853849583", 21);
+        Passenger newPass = new Passenger("King", "Patryk", "1234567890", "0853849583", 26);
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, newPass::getTitle);
         assertEquals("Please Enter a valid title", exception.getMessage());
     }
 
     @Test
     void nameTestFail(){
-        Passenger newPass = new Passenger("Mr", "Pa", "1234567890", "0853849583", 21);
+        Passenger newPass = new Passenger("Mr", "Pa", "1234567890", "0853849583", 26);
         IllegalArgumentException exception =  assertThrows(IllegalArgumentException.class, newPass::getName);
         assertEquals("This is not a valid name, must be three or more characters", exception.getMessage());
+    }
+
+    @Test
+    void idTestFail(){
+        Passenger newPass = new Passenger("Mr", "Patryk", "123456789", "0853849583", 26);
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, newPass::getId);
+        assertEquals("ID must be at least 10 characters long", exception.getMessage());
+    }
+
+    @Test
+    void phoneTestLengthFail(){
+        Passenger newPass = new Passenger("Mr", "Patryk", "123456789", "085384", 26);
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, newPass::getPhone);
+        assertEquals("Phone number must be at least 7 digits long", exception.getMessage());
     }
 
     @AfterEach
