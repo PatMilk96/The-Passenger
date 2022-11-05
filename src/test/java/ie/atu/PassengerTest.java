@@ -44,10 +44,18 @@ class PassengerTest {
     }
 
     @Test
-    void phoneTestFail(){
-        Passenger newPass = new Passenger("Mr", "Patryk", "123456789", "08538dsax", 26);
+    void phoneLenTestFail(){
+        Passenger newPass = new Passenger("Mr", "Patryk", "123456789", "085384", 26);
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, newPass::getPhone);
-        assertEquals("Phone number must be at least 7 digits long and contain only digits", exception.getMessage());
+        assertEquals("Phone number must be at least 7 digits", exception.getMessage());
+
+    }
+
+    @Test
+    void phoneAlphTestFail(){
+        Passenger newPass = new Passenger("Mr", "Patryk", "123456789", "085384sfa", 26);
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, newPass::getPhone);
+        assertEquals("Phone number must contain only digits", exception.getMessage());
     }
 
     @Test
