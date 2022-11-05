@@ -74,7 +74,7 @@ public class Passenger {
             return age;
         }
         else
-            throw new IllegalArgumentException("Must be over 16");
+            throw new IllegalArgumentException("Passenger must be over 16 to fly");
     }
 
     public void setAge(int age) {
