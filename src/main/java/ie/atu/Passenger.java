@@ -56,11 +56,11 @@ public class Passenger {
     }
 
     public String getPhone() {
-        if(phone.length() < 7){
-            throw new IllegalArgumentException("Phone number must be at least 7 digits long");
+        if(phone.matches("[0-9]+") && phone.length() >= 7){
+            return phone;
         }
         else{
-            return phone;
+            throw new IllegalArgumentException("Phone number must be at least 7 digits long and contain only digits");
         }
 
     }
