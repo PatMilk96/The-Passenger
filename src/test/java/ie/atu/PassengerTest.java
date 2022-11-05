@@ -57,6 +57,48 @@ class PassengerTest {
         assertEquals("Passenger must be over 16 to fly", exception.getMessage());
     }
 
+    @Test
+    void titleSetMrsTest(){
+        Passenger newPass = new Passenger("Mr", "Patryk", "1234567890", "0853849583", 26);
+        newPass.setTitle("Mrs");
+        assertEquals("Mrs", newPass.getTitle());
+    }
+
+    @Test
+    void titleSetMsTest(){
+        Passenger newPass = new Passenger("Mr", "Patryk", "1234567890", "0853849583", 26);
+        newPass.setTitle("Ms");
+        assertEquals("Ms", newPass.getTitle());
+    }
+
+    @Test
+    void nameSetTest(){
+        Passenger newPass = new Passenger("Mr", "Patryk", "1234567890", "0853849583", 26);
+        newPass.setName("Joe");
+        assertEquals("Joe", newPass.getName());
+    }
+
+    @Test
+    void idSetTest(){
+        Passenger newPass = new Passenger("Mr", "Patryk", "1234567890", "0853849583", 26);
+        newPass.setId("0987654321");
+        assertEquals("0987654321", newPass.getId());
+    }
+
+    @Test
+    void phoneSetTest(){
+        Passenger newPass = new Passenger("Mr", "Patryk", "1234567890", "0853849583", 26);
+        newPass.setPhone("085283746");
+        assertEquals("085283746", newPass.getPhone());
+    }
+
+    @Test
+    void ageSetTest(){
+        Passenger newPass = new Passenger("Mr", "Patryk", "1234567890", "0853849583", 26);
+        newPass.setAge(17);
+        assertEquals(17, newPass.getAge());
+    }
+
     @AfterEach
     void tearDown() {
     }
