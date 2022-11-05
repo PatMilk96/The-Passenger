@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: ie.atu.PassengerTest
 -------------------------------------------------------------------------------
-Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.153 s - in ie.atu.PassengerTest
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.149 s - in ie.atu.PassengerTest
