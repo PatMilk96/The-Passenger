@@ -1,0 +1,16 @@
+name: CI
+
+on:
+  pull_request:
+    branches[ master ]
+
+  jobs:
+    build:
+      runs-on: windows-latest
+
+      steps:
+        - uses: actions/checkout@v3
+        - uses: Set up JDK 15
+          with:
+            java-version: '15'
+            distribution: 'adopt'
