@@ -7,6 +7,10 @@ public class Passenger {
     private String phone;
     private int age;
 
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+
     public Passenger(String title, String name, String id, String phone, int age) {
         this.title = title;
         this.name = name;
