@@ -12,7 +12,7 @@ public class Passenger {
     }
 
     public Passenger(String title, String name, String id, String phone, int age) {
-        this.title = title;
+        Passenger.title = title;
         this.name = name;
         this.id = id;
         this.phone = phone;
@@ -20,7 +20,7 @@ public class Passenger {
     }
 
     public String getTitle() {
-        if(title == "Mr" || title == "Mrs" || title == "Ms"){
+        if(title.equals("Mr") || title.equals("Mrs") || title.equals("Ms")){
             return title;
         }
         else{
@@ -29,7 +29,7 @@ public class Passenger {
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        Passenger.title = title;
     }
 
     public String getName() {
