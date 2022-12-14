@@ -7,16 +7,13 @@ public class Passenger {
     private String phone;
     private int age;
 
-    public static void main(String[] args) {
-        System.out.println("Hello World");
-    }
-
     public Passenger(String title, String name, String id, String phone, int age) {
         Passenger.title = title;
         this.name = name;
         this.id = id;
         this.phone = phone;
         this.age = age;
+        System.out.println("Hello");
     }
 
     public String getTitle() {

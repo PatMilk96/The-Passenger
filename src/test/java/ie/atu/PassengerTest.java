@@ -103,8 +103,8 @@ class PassengerTest {
     @Test
     void ageSetTest(){
         Passenger newPass = new Passenger("Mr", "Patryk", "1234567890", "0853849583", 26);
-        newPass.setAge(18);
-        assertEquals(18, newPass.getAge());
+        newPass.setAge(20);
+        assertEquals(20, newPass.getAge());
     }
 
     @AfterEach
